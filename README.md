@@ -4,15 +4,23 @@ A lightweight system for publishing analytics data from Google Analytics profile
 
 Available reports are named and described in [`reports.json`](reports/reports.json). For now, they're hardcoded into the repository.
 
-### Setup
+## Setup
 
-* To run the utility on your computer, install it through npm:
+### Windows servers
+
+Install [node.js for Windows](https://nodejs.org/en/)
+
+Install JavaScript dependencies (from the directory containing the local copy of this github repository):
 
 ```bash
-npm install -g analytics-reporter
+npm install
 ```
 
-If you're developing locally inside the repo, `npm install` is sufficient.
+### Linux servers
+
+See [analytics-reporter README.md](https://github.com/18F/analytics-reporter/blob/master/README.md) for Linux setup instructions.
+
+## Google Analytics
 
 * [Create an API service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) in the Google developer dashboard.
 
@@ -20,16 +28,20 @@ If you're developing locally inside the repo, `npm install` is sufficient.
 
 * Go to the "Credentials" section and generate "service account" credentials, and download the **JSON** private key file it gives you.
 
-* Take the generated client email address (ends with `gserviceaccount.com`) and grant it `Read, Analyze & Collaborate` permissions on the Google Analytics profile(s) whose data you wish to publish.
+* Add a system environment variable to specify the path to the private key file you downloaded in the previous step:
 
-* Set environment variables for your app's generated email address, and for the profile you authorized it to:
-
-```bash
-export ANALYTICS_REPORT_EMAIL="YYYYYYY@developer.gserviceaccount.com"
-export ANALYTICS_REPORT_IDS="ga:XXXXXX"
+```
+ANALYTICS_KEY_PATH="/path/to/secret_key.json"
 ```
 
-You may wish to manage these using [`autoenv`](https://github.com/kennethreitz/autoenv). If you do, there is an `example.env` file you can copy to `.env` to get started.
+* Take the generated client email address (ends with `gserviceaccount.com`) and grant it `Read, Analyze & Collaborate` permissions on the Google Analytics profile(s) whose data you wish to publish.
+
+* Add system environment variables for your app's generated email address, and for the profile you authorized it to:
+
+```bash
+ANALYTICS_REPORT_EMAIL="YYYYYYY@developer.gserviceaccount.com"
+ANALYTICS_REPORT_IDS="ga:XXXXXX"
+```
 
 To find your Google Analytics view ID:
 
@@ -41,74 +53,22 @@ To find your Google Analytics view ID:
   1. Click "View Settings"
   1. Copy the view ID.  You'll need to enter it with `ga:` as a prefix.
 
-* You can specify your private key through environment variables either as a file path, or the contents of the key (helpful for Heroku and Heroku-like systems).
-
-To specify a file path:
-
-```
-export ANALYTICS_KEY_PATH="/path/to/secret_key.json"
-```
-
-To specify the key directly, paste in the contents of the JSON file's `private_key` field **directly and exactly**, in quotes, and **rendering actual line breaks** (not `\n`'s) (below example has been sanitized):
-
-```
-export ANALYTICS_KEY="-----BEGIN PRIVATE KEY-----
-[contents of key]
------END PRIVATE KEY-----
-"
-```
-
 * Make sure your computer or server is syncing its time with the world over NTP. Your computer's time will need to match those on Google's servers for the authentication to work.
 
 * Test your configuration by printing a report to STDOUT:
 
 ```bash
-./bin/analytics --only users
+node bin/analytics --only realtime
 ```
 
 If you see a nicely formatted JSON file, you are all set.
-
-* (Optional) Authorize yourself for S3 publishing.
-
-If you plan to use this project's lightweight S3 publishing system, you'll need to add 6 more environment variables:
-
-```
-export AWS_REGION=us-east-1
-export AWS_ACCESS_KEY_ID=[your-key]
-export AWS_SECRET_ACCESS_KEY=[your-secret-key]
-
-export AWS_BUCKET=[your-bucket]
-export AWS_BUCKET_PATH=[your-path]
-export AWS_CACHE_TIME=0
-```
-
-### Other configuration
-
-If you use a **single domain** for all of your analytics data, then your profile is likely set to return relative paths (e.g. `/faq`) and not absolute paths when accessing real-time reports.
-
-You can set a default domain, to be returned as data in all real-time data point:
-
-```
-export ANALYTICS_HOSTNAME=https://konklone.com
-```
-
-This will produce points similar to the following:
-
-```json
-{
-  "page": "/post/why-google-is-hurrying-the-web-to-kill-sha-1",
-  "page_title": "Why Google is Hurrying the Web to Kill SHA-1",
-  "active_visitors": "1",
-  "domain": "https://konklone.com"
-}
-```
 
 ### Use
 
 Reports are created and published using the `analytics` command.
 
 ```bash
-analytics
+node analytics
 ```
 
 This will run every report, in sequence, and print out the resulting JSON to STDOUT. There will be two newlines between each report.
