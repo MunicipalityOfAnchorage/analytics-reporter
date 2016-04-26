@@ -118,7 +118,7 @@
         "sort": "-rt:activeUsers",
         "max-results": "25",
 		"filters": [
-			"rt:pagePath=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"rt:pagePath=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"rt:pagePath!~pagenotfound"]
       },
       "meta": {
@@ -137,7 +137,7 @@
         "sort": "-ga:pageviews",
         "max-results": "25",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -157,7 +157,7 @@
         "sort": "-ga:pageviews",
         "max-results": "25",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -177,7 +177,7 @@
         "sort": "-ga:pageviews",
         "max-results": "25",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -197,7 +197,7 @@
         "sort": "-ga:pageviews",
         "max-results": "25",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -247,7 +247,7 @@
         "metrics": ["rt:activeUsers"],
         "sort": "-rt:activeUsers",
 		"filters": [
-			"rt:pagePath=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"rt:pagePath=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"rt:pagePath!~pagenotfound"]
       },
       "meta": {
@@ -265,7 +265,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -284,7 +284,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -303,7 +303,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
@@ -322,7 +322,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
 		"filters": [
-			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org",
+			"ga:hostname=~^gis.muni.org|^merrillfieldmasterplan.com|^muni.org|^www.muni.org|^analytics.muni.org",
 			"ga:pagePath!~pagenotfound"
 		]
       },
