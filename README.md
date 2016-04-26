@@ -129,44 +129,44 @@ A report might look something like this:
 * `--output` - Output to a directory.
 
 ```bash
-analytics --output /path/to/data
+node analytics --output /path/to/data
 ```
 
 * `--publish` - Publish to an S3 bucket. Requires AWS environment variables set as described above.
 
 ```bash
-analytics --publish
+node analytics --publish
 ```
 
 * `--only` - only run one or more specific reports. Multiple reports are comma separated.
 
 ```bash
-analytics --only devices
-analytics --only devices,today
+node analytics --only devices
+node analytics --only devices,today
 ```
 
 * `--slim` -Where supported, use totals only (omit the `data` array). Only applies to JSON, and reports where `"slim": true`.
 
 ```bash
-analytics --only devices --slim
+node analytics --only devices --slim
 ```
 
 * `--csv` - Gives you CSV instead of JSON.
 
 ```bash
-analytics --csv
+node analytics --csv
 ```
 
 * `--frequency` - Limit to reports with this 'frequency' value.
 
 ```bash
-analytics --frequency=realtime
+node analytics --frequency=realtime
 ```
 
 * `--debug` - Print debug details on STDOUT.
 
 ```bash
-analytics --publish --debug
+node analytics --publish --debug
 ```
 
 ### Public domain
