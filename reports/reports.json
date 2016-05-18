@@ -239,7 +239,7 @@
 					"rt:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
-        "name": "Top Cities",
+        "name": "Top Countries",
         "description": "Top countries for active onsite users."
       }
     },
