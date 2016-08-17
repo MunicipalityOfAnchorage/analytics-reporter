@@ -6,7 +6,7 @@
       "realtime": true,
       "query": {
         "metrics": ["rt:activeUsers"],
-		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"rt:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -22,7 +22,7 @@
         "metrics": ["ga:sessions"],
         "start-date": "today",
         "end-date": "today",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -40,7 +40,7 @@
         "start-date": "90daysAgo",
         "end-date": "yesterday",
         "sort": "ga:date",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -58,7 +58,7 @@
         "start-date": "90daysAgo",
         "end-date": "yesterday",
         "sort": "ga:date",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -77,7 +77,7 @@
         "end-date": "yesterday",
         "sort": "ga:date",
 		"filters": ["ga:operatingSystem==Windows",
-					"ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+					"ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -95,7 +95,7 @@
         "start-date": "90daysAgo",
         "end-date": "yesterday",
         "sort": "ga:date,-ga:sessions",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -114,7 +114,7 @@
         "end-date": "yesterday",
         "sort": "ga:date,-ga:sessions",
         "filters": ["ga:browser==Internet Explorer",
-					"ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+					"ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -131,7 +131,7 @@
         "metrics": ["rt:activeUsers"],
         "sort": "-rt:activeUsers",
         "max-results": "25",
-		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"rt:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -149,7 +149,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
         "max-results": "25",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -167,7 +167,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
         "max-results": "25",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -185,7 +185,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
         "max-results": "25",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -203,7 +203,7 @@
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
         "max-results": "25",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -219,7 +219,7 @@
         "dimensions": ["rt:city"],
         "metrics": ["rt:activeUsers"],
         "sort": "-rt:activeUsers",
-		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"rt:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -235,7 +235,7 @@
         "dimensions": ["rt:country"],
         "metrics": ["rt:activeUsers"],
         "sort": "-rt:activeUsers",
-		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"rt:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -255,7 +255,7 @@
         "dimensions": ["rt:pagePath", "rt:pageTitle"],
         "metrics": ["rt:activeUsers"],
         "sort": "-rt:activeUsers",
-		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["rt:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"rt:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -272,7 +272,7 @@
         "start-date": "7daysAgo",
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -289,7 +289,7 @@
         "start-date": "30daysAgo",
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -306,7 +306,7 @@
         "start-date": "90daysAgo",
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
@@ -323,7 +323,7 @@
         "start-date": "365daysAgo",
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
-		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org",
+		"filters": ["ga:pagePath=~^.*.muni.org|^.*merrillfieldmasterplan.com|^.*.munibudget.org|^.*.ci.anchorage.ak.us",
 					"ga:pagePath!~^.*(edit|new|test).*.muni.org|^client.ql2.com|^.*.googleusercontent.com|pagenotfound"]
       },
       "meta": {
