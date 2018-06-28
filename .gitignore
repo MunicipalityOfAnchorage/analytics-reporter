@@ -2,12 +2,19 @@
 .DS_Store
 *.p12
 *.pem
-/node_modules
+key_file.txt
+node_modules
 .python-version
-/*.env
+*.env
 *.json
 *.csv
 *.gz
 /data
 todo.txt
 npm-debug.log
+*.swp
+.git
+
+# Track selected JSON files
+!package.json
+!reports/*.json
