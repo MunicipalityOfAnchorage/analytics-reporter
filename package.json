@@ -1,13 +1,18 @@
 {
   "name": "analytics-reporter",
-  "version": "1.1.1",
+  "version": "1.2.2",
   "description": "A lightweight command line tool for reporting and publishing analytics data from a Google Analytics account.",
-  "keywords": ["analytics", "google analytics"],
+  "keywords": [
+    "analytics",
+    "google analytics"
+  ],
   "homepage": "https://github.com/18F/analytics-reporter",
   "license": "CC0-1.0",
   "scripts": {
+    "migrate": "`npm bin`/knex migrate:latest",
+    "pretest": "NODE_ENV=test npm run migrate",
     "start": "node app.js",
-    "test": "node test/*"
+    "test": "`npm bin`/mocha test/*.test.js test/**/*.test.js"
   },
   "contributors": [
     {
@@ -21,17 +26,27 @@
     {
       "name": "Lauren Ancona",
       "email": "lauren.ancona@phila.gov"
+    },
+    {
+      "name": "Eric Schles",
+      "email": "eric.schles@gsa.gov"
     }
   ],
   "files": [
-    "bin", "test", "reports",
-    "analytics.js", "config.js",
+    "bin",
+    "src",
+    "test",
+    "reports",
+    "index.js",
+    "newrelic.js",
     "package.json",
     "*.md"
   ],
-  "engines": {"node": ">=0.10.0"},
+  "engines": {
+    "node": ">=7.0.0"
+  },
   "preferGlobal": true,
-  "main": "analytics",
+  "main": "index",
   "bin": {
     "analytics": "./bin/analytics"
   },
@@ -43,17 +58,20 @@
     "url": "https://github.com/18F/analytics-reporter/issues"
   },
   "dependencies": {
-    "googleapis": "^2.1.5",
-    "node-schedule": "^0.1.13",
-    "minimist": "*",
-    "async": "*",
-    "aws-sdk": "*",
-    "fast-csv": "*",
-    "lodash": "^3.10.1"
+    "aws-sdk": "2.58.0",
+    "fast-csv": "^2.4.0",
+    "googleapis": "^19.0.0",
+    "minimist": "^1.2.0",
+    "winston-color": "^1.0.0"
   },
   "devDependencies": {
-    "body-parser": "~1.8.1",
-    "express": "~4.9.0",
-    "ejs": "~2.3.1"
+    "chai": "^4.0.2",
+    "mocha": "^5.2.0",
+    "proxyquire": "^1.7.11"
+  },
+  "optionalDependencies": {
+    "knex": "^0.13.0",
+    "newrelic": "^1.36.1",
+    "pg": "^6.1.2"
   }
 }
